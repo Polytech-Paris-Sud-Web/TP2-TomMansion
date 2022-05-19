@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  web:
+    image: "tomansion/webav"
+    labels:
+      - traefik.frontend.rule=Host:webav.tomansion.fr
+      - traefik.port=8080
+    container_name: webav
+  bdd:
+    image: "tomansion/webav-db"
+    labels:
+      - traefik.frontend.rule=Host:webav-bdd.tomansion.fr
+      - traefik.port=3000
+    container_name: webav-bdd
+
+networks:
+  default:
+    external: true
+    name: proxy
+

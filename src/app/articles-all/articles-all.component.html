@@ -1,0 +1,11 @@
+<h2>All the articles</h2>
+
+<span *ngIf="articles">
+    <app-articles
+     [articles]="articles"
+     (updateRequest)="updateArticles()">
+    </app-articles>
+</span>
+<span *ngIf="!articles">
+    Loading
+</span>
