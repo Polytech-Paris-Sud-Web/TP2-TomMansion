@@ -4,6 +4,7 @@ services:
     image: "tomansion/webav"
     labels:
       - traefik.frontend.rule=Host:webav.tomansion.fr
+      - traefik.http.middlewares.webav.compress=true
       - traefik.port=8080
     container_name: webav
   bdd:
