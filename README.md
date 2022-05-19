@@ -11,6 +11,8 @@ I did what I could
 Front available at https://webav.tomansion.fr/
 Back at https://webav-bdd.tomansion.fr
 
+![cd](https://github.com/Polytech-Paris-Sud-Web/TP2-TomMansion/actions/workflows/deploy.yml/badge.svg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
 ## JSON DB:
