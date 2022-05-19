@@ -9,4 +9,4 @@ WORKDIR .
 RUN npm install -g http-server
 COPY --from=builder /app/dist/simple-app/ .
 EXPOSE 8080
-CMD http-server simple-app
+CMD http-server .
