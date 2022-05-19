@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { ArticlesAllComponent } from './articles-all/articles-all.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthorService } from './author.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { AuthorService } from './author.service';
     ]),
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ArticleService, AuthorService],
   bootstrap: [AppComponent]

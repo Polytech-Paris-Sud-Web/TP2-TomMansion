@@ -2,15 +2,15 @@
 
 <form [formGroup]="articleForm" (ngSubmit)="createArticle()" class="panel">
     <label class="center-block">title:
-        <input class="form-control" formControlName="title">
+        <input class="form-control" formControlName="title" placeholder="Article title">
     </label>
     <br />
     <label class="center-block">content:
-        <textarea class="form-control" formControlName="content"></textarea>
+        <textarea class="form-control" formControlName="content" placeholder="Article content"></textarea>
     </label>
     <br />
     <label class="center-block">author:
-        <input class="form-control" formControlName="author">
+        <input class="form-control" formControlName="author" placeholder="Article author">
     </label>
     <br />
     <button class="btn btn-success" [disabled]="articleForm.invalid" type="submit">Save</button>

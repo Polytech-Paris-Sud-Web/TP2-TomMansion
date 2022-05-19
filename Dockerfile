@@ -1,16 +1,12 @@
-FROM node:16.13-alpine
-
+FROM node:16.13-alpine as builder
 WORKDIR /app
-
 COPY . .
-
-run ls
-
 RUN npm ci
 RUN npm run build
+
+FROM node:16.13-alpine
+WORKDIR .
 RUN npm install -g http-server
-
-run ls
-
+COPY --from=builder /app/dist/simple-app/ .
 EXPOSE 8080
-CMD http-server dist/simple-app
+CMD http-server simple-app
