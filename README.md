@@ -1,4 +1,7 @@
-# ToMansion TP1
+# ToMansion TP2 - APP5 Info 2021 2022
+
+
+
 
 ## Remerciements
 
@@ -23,7 +26,7 @@ Ni `npm run build` ni `npm run build --prod` ne fonctionnait, il fallait faire `
 
 Mon serveur [tomansion.fr](https://tomansion.fr) est trop lent et chargé pour build les images, les actions de github se terminaient en timeout... Je suis donc passé par docker hub pour n'avoir qu'à les déployer.
 
-Difficultées à faire que traefik compresse les pages web.
+Difficultées à faire que traefik compresse les pages web, ce qui fait, en plus des faibles performances de mon serveur, que le score de performances sur lighthouse est pas ouf...
 
 ## Deployment ![cd](https://github.com/Polytech-Paris-Sud-Web/TP2-TomMansion/actions/workflows/deploy.yml/badge.svg)
 
@@ -40,7 +43,7 @@ Deployment & https made possible with Traefik
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
 
-## Development server
+## Development
 
 ### JSON DB
 ```bash
